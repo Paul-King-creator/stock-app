@@ -6,7 +6,7 @@ import random
 import time
 from datetime import datetime, timedelta
 from typing import List
-from models import StockDayData, StockRealtimeData, OHLCVBar
+from .models import StockDayData, StockRealtimeData, OHLCVBar
 
 class DataGenerator:
     def __init__(self, initial_price: float = 100.0, volatility: float = 0.02):
