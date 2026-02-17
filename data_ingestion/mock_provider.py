@@ -4,7 +4,7 @@ Simulates connecting to an external market data API.
 """
 from datetime import datetime
 from typing import List, Dict
-from data_generator import DataGenerator
+from .data_generator import DataGenerator
 from models import StockDayData, StockRealtimeData
 
 class MockDataProvider:
