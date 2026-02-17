@@ -6,8 +6,8 @@ from fastapi import FastAPI, HTTPException, Query
 from typing import List, Optional, Dict
 from datetime import datetime, timedelta
 import pandas as pd
-from mock_provider import get_provider
-from models import StockDayData
+from data_ingestion.mock_provider import get_provider
+from data_ingestion.models import StockDayData
 from indicators.calculator import (
     calculate_sma, calculate_ema, calculate_rsi, 
     calculate_macd, calculate_bollinger_bands, calculate_all_indicators

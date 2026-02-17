@@ -7,7 +7,7 @@ import json
 import websockets
 from datetime import datetime
 from typing import Set
-from mock_provider import get_provider
+from .mock_provider import get_provider
 
 # Connected clients
 connected_clients: Set = set()
