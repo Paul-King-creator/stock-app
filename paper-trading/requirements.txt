@@ -1,0 +1,13 @@
+# Project Dependencies
+
+This file lists the Python packages required for the Paper Trading Engine.
+
+## Core Libraries
+
+-   `pandas`
+-   `numpy`
+-   `finnhub-python` # Example, can be replaced with actual market data source API client
+
+## Development Dependencies
+
+-   `pytest` # For automated testing
