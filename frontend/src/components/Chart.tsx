@@ -75,7 +75,7 @@ const Chart: React.FC<ChartProps> = ({ symbol }) => {
             low: d.low,
             close: d.close,
           }));
-          candlestickSeriesRef.current.setData(chartData);
+          candlestickSeriesRef.current?.setData(chartData);
         }
       })
       .catch(err => console.error('Error fetching chart data:', err));
