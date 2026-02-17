@@ -16,7 +16,7 @@ services:
 
   websocket:
     build: .
-    command: python -m data-ingestion.websocket_server
+    command: python -m data_ingestion.websocket_server
     ports:
       - "8765:8765"
     depends_on:
