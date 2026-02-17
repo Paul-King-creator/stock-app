@@ -8,7 +8,7 @@
     "react-scripts": "5.0.1",
     "typescript": "^4.9.5",
     "lightweight-charts": "^4.1.0",
-    "react-use-websocket": "^3.11.0",
+    "react-use-websocket": "^4.8.0",
     "axios": "^1.6.0",
     "@types/node": "^16.18.0",
     "@types/react": "^18.2.0",
