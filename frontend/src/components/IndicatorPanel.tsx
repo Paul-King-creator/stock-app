@@ -15,7 +15,7 @@ const IndicatorPanel: React.FC<IndicatorPanelProps> = ({ symbol }) => {
   const [indicators, setIndicators] = useState<Indicators>({});
 
   useEffect(() => {
-    fetch(`http://localhost:8000/stocks/${symbol}/indicators?indicators=sma,rsi,macd,ema&window=20`)
+    fetch(`http://100.83.241.57:8000/stocks/${symbol}/indicators?indicators=sma,rsi,macd,ema&window=20`)
       .then(res => res.json())
       .then(data => {
         const result: Indicators = {};

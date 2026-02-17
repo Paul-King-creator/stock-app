@@ -21,7 +21,7 @@ const Watchlist: React.FC<WatchlistProps> = ({ onSelectSymbol, selectedSymbol })
     // Fetch all stocks in watchlist
     const fetchStocks = async () => {
       const stockPromises = WATCHLIST_SYMBOLS.map(symbol =>
-        fetch(`http://localhost:8000/stocks/${symbol}/history?limit=2`)
+        fetch(`http://100.83.241.57:8000/stocks/${symbol}/history?limit=2`)
           .then(res => res.json())
           .then(data => {
             if (data.data && data.data.length >= 2) {

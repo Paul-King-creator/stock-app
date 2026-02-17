@@ -64,7 +64,7 @@ const Chart: React.FC<ChartProps> = ({ symbol }) => {
   useEffect(() => {
     if (!candlestickSeriesRef.current) return;
 
-    fetch(`http://localhost:8000/stocks/${symbol}/history?limit=100`)
+    fetch(`http://100.83.241.57:8000/stocks/${symbol}/history?limit=100`)
       .then(res => res.json())
       .then(data => {
         if (data.data) {

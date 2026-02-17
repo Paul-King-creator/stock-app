@@ -22,20 +22,29 @@ interface User {
   cash: number;
 }
 
+const API_URL = 'http://100.83.241.57:8000';
+
 const App: React.FC = () => {
   const [selectedSymbol, setSelectedSymbol] = useState<string>('AAPL');
   const [stockData, setStockData] = useState<StockData | null>(null);
   const [user, setUser] = useState<User | null>(null);
   const [showOrderBook, setShowOrderBook] = useState(false);
   const [showNews, setShowNews] = useState(false);
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const handleLogin = (loggedInUser: User) => {
     setUser(loggedInUser);
+    setIsAuthenticated(true);
+  };
+
+  const handleLogout = () => {
+    setUser(null);
+    setIsAuthenticated(false);
   };
 
   useEffect(() => {
     // Fetch initial stock data
-    fetch(`http://localhost:8000/stocks/${selectedSymbol}/history?limit=1`)
+    fetch(`${API_URL}/stocks/${selectedSymbol}/history?limit=1`)
       .then(res => res.json())
       .then(data => {
         if (data.data && data.data.length > 0) {

@@ -68,7 +68,7 @@ export const useSymbolSubscription = (symbol: string) => {
     // In a real implementation, this would send a subscribe message to the WebSocket
     // For now, we'll simulate with polling
     const fetchQuote = () => {
-      fetch(`http://localhost:8000/stocks/${symbol}/history?limit=1`)
+      fetch(`http://100.83.241.57:8000/stocks/${symbol}/history?limit=1`)
         .then(res => res.json())
         .then(data => {
           if (data.data && data.data.length > 0) {

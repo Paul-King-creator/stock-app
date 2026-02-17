@@ -20,7 +20,7 @@ const OrderBook: React.FC<OrderBookProps> = ({ symbol }) => {
     // Simulate order book data
     // In a real app, this would come from a WebSocket or API
     const generateOrderBook = () => {
-      fetch(`http://localhost:8000/stocks/${symbol}/history?limit=1`)
+      fetch(`http://100.83.241.57:8000/stocks/${symbol}/history?limit=1`)
         .then(res => res.json())
         .then(data => {
           if (data.data && data.data.length > 0) {
